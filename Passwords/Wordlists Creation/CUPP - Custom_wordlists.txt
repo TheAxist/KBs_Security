@@ -1,0 +1,1 @@
+CUPP takes keywords that you give it and generates a lists of potential passwords
