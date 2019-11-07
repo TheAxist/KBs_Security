@@ -1,0 +1,11 @@
+Nikto - web vuln scanner
+----------------------
+nikto -h 192.168.0.15
+
+Nikto with proxy - in example 3129 is the server proxy port
+
+nikto -h 10.0.0.175 -useproxy http://10.0.0.175:3129
+
+
+-C all
+	Force check all possible dirs

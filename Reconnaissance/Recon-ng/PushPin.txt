@@ -1,0 +1,26 @@
+PushPin
+
+>add locations
+
+>load geocode
+
+Take the address and add a latitude/longitude
+> use recon/locations-locations/geocode
+
+>search locations-
+
+ recon/locations-pushpins/flickr
+    recon/locations-pushpins/instagram
+    recon/locations-pushpins/picasa
+    recon/locations-pushpins/shodan
+    recon/locations-pushpins/twitter
+    recon/locations-pushpins/youtube
+
+Need API keys to use these
+
+
+
+PushPin Reporting module
+------------------------
+> load reporting/pushpin
+> show options

@@ -1,0 +1,25 @@
+
+DIRB - Web Content Scanner
+---------------------------
+
+##Usage##
+dirb <url_base> [<wordlist_file(s)>] [options]
+dirb http://10.0.1.18
+
+##Description##
+DIRB is a Web Content Scanner. It looks for existing (and/or hidden) Web Objects. It basically works by launching a dictionary based attack against a web server and analyzing the response.
+
+    DirB - /usr/share/dirb/wordlists/
+	
+    wfuzz - /usr/share/wfuzz/wordlist/
+    SecList - /usr/share/seclists
+
+DIRB comes with a set of preconfigured attack wordlists for easy usage but you can use your custom wordlists. Also DIRB sometimes can be used as a classic CGI scanner, but remember is a content scanner not a vulnerability scanner.
+
+DIRB can use multiple wordfiles at a time.  Seperate with coma ","
+
+
+
+Resources
+http://tools.kali.org/web-applications/dirb
+http://dirb.sourceforge.net/faq.txt

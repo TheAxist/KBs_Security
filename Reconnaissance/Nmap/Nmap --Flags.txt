@@ -1,0 +1,5 @@
+
+
+
+Fast Scan / Less Accurate
+nmap 10.11.1.234 --defeat-rst-ratelimit -p0- -vv --open

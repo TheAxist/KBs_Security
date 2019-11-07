@@ -1,0 +1,9 @@
+rpcclient -U "" 192.168.31.201
+
+rpcclient $> 
+
+srvinfo
+netshareenumall
+enumdomusers
+getdompw
+eventlog_readlog

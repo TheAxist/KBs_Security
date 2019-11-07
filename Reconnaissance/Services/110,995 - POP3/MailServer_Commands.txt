@@ -1,0 +1,27 @@
+> telnet <IP Addr> 110
+> user <user>
+> pass <pass>
+
+Type list to bring up a list of your emails:
+> list
+
+Read emails using "retr", Delete emails with "dele":
+> retr 3
+
+
+Send emails:
+> telnet <ip addr> 25
+> ehlo example
+> mail from: username@example.com
+> rcpt to: friend@hotmail.com
+> data
+Subject: Test email
+
+Hello, 
+blah
+
+.
+>quit
+
+
+

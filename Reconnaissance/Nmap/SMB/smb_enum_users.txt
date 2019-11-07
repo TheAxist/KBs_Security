@@ -1,0 +1,5 @@
+nmap --script smb-enum-users.nse -p 139,445 <host>
+
+ Attempts to enumerate the users on a remote Windows system, with as much information as possible, through two different techniques (both over MSRPC, which uses port 445 or 139; see smb.lua). The goal of this script is to discover all user accounts that exist on a remote system. This can be helpful for administration, by seeing who has an account on a server, or for penetration testing or network footprinting, by determining which accounts exist on a system.
+
+A penetration tester who is examining servers may wish to determine the purpose of a server. By getting a list of who has access to it, the tester might get a better idea (if financial people have accounts, it probably relates to financial information). Additionally, knowing which accounts exist on a system (or on multiple systems) allows the pen-tester to build a dictionary of possible usernames for bruteforces, such as a SMB bruteforce or a Telnet bruteforce. These accounts may be helpful for other purposes, such as using the accounts in Web applications on this or other servers. 

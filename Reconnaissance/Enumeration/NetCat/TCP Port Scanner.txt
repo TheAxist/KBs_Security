@@ -1,0 +1,4 @@
+Port scan an IP Address:
+$ nc -v -n -z -w1 [TargetIP] [StartPort]-[EndPort]
+
+Attempt to connect to each port in a range from [EndPort] to [StartPort] on [TargetIP] running verbosely (-v linux, -vv windows), not resolving names (-n), without sending any data (-z), and waiting for a connection to occur (-w1)

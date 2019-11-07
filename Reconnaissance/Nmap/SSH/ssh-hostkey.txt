@@ -1,0 +1,1 @@
+# nmap 10.11.1.71 -p 22 -sV --script=ssh-hostkey

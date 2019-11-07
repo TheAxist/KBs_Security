@@ -1,0 +1,60 @@
+Keys:
+-----
+keys add bing_api 6FjZHJtq6cfwXgmfmJHIYmvS5BJEsLjd/BngDKJGW4U
+keys add builtwith_api f9254930-642b-4bcd-908d-98ea28c2fd8d 
+keys add censysio_id 7dacc4c2-87f1-4003-9510-f354fdd94fc8
+keys add censysio_secret zWNwPPXH4B855LirWWYOQYgyDcJnVT3H
+keys add facebook_api ff043db3f5080dd842820154e3f41264
+keys add flickr_api e8674e2513117e672bf25c99cdb18162
+keys add fullcontact_api 567ce9d201d8067f
+keys add github_api 36c4125491bd8f91f4772b0ddbca710155f6a906
+keys add google_api AIzaSyA4WRrmrOBcxhILdKL74TP-wRTHhJgYd68
+keys add google_cse 001280586187183383443:vcqkedkugeo
+keys add ipinfodb_api aaed7f646de462e8Nonec8660241534d4fb3aec7cb5e2e680b6c1917ff40b24cd851
+keys add linkedin_api 78a67n2zg7z933
+keys add linkedin_secret bzvU0iMuwWi7M0hN
+keys add shodan_api ySnsWlrFHIjGYTCyQ4eh4JSzLoy9eyQa
+
+
+
+
+Module Groups:
+--------------
+Discovery - Looks for interesting info in the target environment including the DNS cache snooping to discover antivirus update info and using search engines to find interesting files.
+
+Exploitation - Includes features to exploit command injection and other similar flaws
+
+Import -  Imports host information from a CSV or flat file into the recon-ng database
+
+Reporting - CSV, HTML, JSON, XLSX, and XML formats
+
+Recon
+
+
+
+> show modules
+
+>use recon/domains-vulnerabilities/xssposed
+
+set source [Site_Name]
+
+run
+
+[recon-ng][target][brute_suffix] > workspaces add WorkspaceName
+add domains target
+
+#Look for sub domains with IPs
+[recon-ng][target][hackertarget]> use recon/domains-hosts/hackertarget
+
+#  Shows all domains listed
+[recon-ng][target]> use recon/domains-hosts/certificate_transparency  
+
+use recon/domains-domains/brute_suffix 
+[recon-ng][target][brute_suffix] > use recon/hosts-ports/shodan_ip                                                                 
+[recon-ng][target][brute_suffix] > use recon/domains-hosts/shodan_hostname                                                         
+
+[recon-ng][target][brute_suffix] > use recon/domains-domains/brute_suffix    
+
+> use recon/domains-vulnerabilities/ghdb       
+> use recon/companies-multi/github_miner       
+> use recon/domains-contacts/whois_pocs                                  

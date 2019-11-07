@@ -1,0 +1,9 @@
+Windows enum tool requires you to know at least one legitmate username/password combonation.
+
+Change directories to where enum.exe is located
+
+Extract other users:
+enum -u [user] -p [password] -U [IP Address]
+
+Extract groups:
+enum -u [user] -p [password] -G [IP Address]
