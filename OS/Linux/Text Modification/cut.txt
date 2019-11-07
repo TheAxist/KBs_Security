@@ -1,0 +1,3 @@
+
+Writes out index.html, greps for href, cuts out the 3rd field using "/" to seperate them
+>cat index.html | grep "href=" |cut -d"/" -f3 |more

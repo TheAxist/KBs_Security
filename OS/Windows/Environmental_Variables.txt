@@ -1,0 +1,12 @@
+
+Powershell:
+==========
+$env:COMPUTERNAME  (Hostname)
+$env:USERDNSDOMAIN  (Domain name)
+
+
+CommandLine:
+===========
+%appdata% (current users AppData\Roaming folder)
+%Computername% (hostname)
+%username% (current user, username)

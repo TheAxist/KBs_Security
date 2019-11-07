@@ -1,0 +1,10 @@
+WIN 7:
+Click on the Windows Orb to open the Start menu.
+
+Enter "regedit" in the search box and hit "Enter." Click on the "regedit" result under programs to launch the Windows registry browser.
+
+Navigate, using the expandable menu in the right panel, to "HKEY_LOCAL_MACHINE | SYSTEM | CurrentControlSet | Control | Class |{4D36E972-E325-11CE-BFC1-08002BE10318}."
+
+Inspect the subfolders of this registry address -- numbered "0000," "0001" and so on -- to locate the device corresponding to your network card.
+
+Locate the "Network Address" key in the left panel followed by your computer's 12-digit MAC address.

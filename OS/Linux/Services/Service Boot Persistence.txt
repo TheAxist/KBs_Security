@@ -1,0 +1,9 @@
+
+> SSH service start automatically at boot:
+update-rc.d ssh enable
+
+> Web Service start automatically at boot:
+update-rc.d apache2 enable
+
+> Manage Kali Services more granularly:
+rcconf and sysv-rc-conf

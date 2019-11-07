@@ -1,0 +1,42 @@
+
+Able to search rescurse for any given files.
+
+Search specific directory or path
+$ find ./test -name "abc.txt"
+
+
+Find readonly files
+$ find /etc -maxdepth 1 -perm /u=r
+
+
+Find executable files
+$ find /bin -maxdepth 2 -perm /a=x
+
+
+Find files belonging to particular user
+$ find . -user bob
+
+
+Search files belonging to group
+# find /var/www -group developer
+
+
+Find Accessed Files in Last 1 Hour
+# find / -amin -60
+
+
+Find files with certain permissions
+$ find . -type f -perm 0664
+
+
+Similarly use 1664 for sticky bit.
+find / -maxdepth 2 -perm /u=s 2>/dev/null
+
+
+List out the found files
+we found files using find command, and now want to list them out as the ls command would have done
+$ find . -exec ls -ld {} \;
+
+
+*Removes those entries that have an error of "Permission Denied"
+2>/dev/null

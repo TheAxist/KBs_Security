@@ -1,0 +1,9 @@
+Network: DHCP / DNS
+-------------------
+
+Set IP - DHCP  / Static
+/etc/network/interfaces
+
+Set DNS Servers: Edit your resolv.conf 
+vi /etc/resolv.conf 
+

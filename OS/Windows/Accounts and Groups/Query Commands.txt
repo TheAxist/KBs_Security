@@ -1,0 +1,3 @@
+query users 
+
+query users /server: servername

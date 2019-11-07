@@ -1,0 +1,1 @@
+redesktop -u <user> -p <pass> 

@@ -1,0 +1,15 @@
+sudo apt-get install <package-name>=<package-version-number> OR
+
+sudo apt-get -t=<target release> install <package-name>
+
+lists all available versions:
+apt-cache showpkg <package-name>
+
+"holds" the package at the current version, preventing automatic upgrades
+apt-mark hold <package-name> 
+
+Uninstall:
+apt-get remove <package>
+
+Remove any configuration as well as uninstalling:
+apt-get purge <package>

