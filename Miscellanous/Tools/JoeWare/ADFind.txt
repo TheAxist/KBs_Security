@@ -1,0 +1,38 @@
+Nice thing about ADFind is it doesnt require admin rights on the box like most powershell does.
+
+Query Domain Administrators security group:
+AdFind.exe -h 172.27.10.178 -sc g:"Domain Admins" member -u <username> -up <password>
+
+
+List all OUs in Domain
+AdFind -default -f "objectcategory=organizationalUnit" -dn
+
+List Users with expired password
+AdFind -s subtree -b ,DC=Contoso,DC=com -f userAccountControl:1.2.840.113556.1.4.803:=8388608 -dn
+
+List member of a Group (for example Group=IT_Support)
+AdFind -b "CN=IT_Support,CN=Users,DC=Contoso,DC=com" member
+
+List all Groups in OU ( for exampleOU=IT, Domain=Contoso.com)
+AdFind -b "OU=IT,DC=Contoso,DC=com" -s subtree -f "(objectcategory=group)"
+
+Count the number of members of a Group (for example Group=IT_Support)
+AdFind -f "sAMAccountName=IT_Support" member -list | AdFind -c
+
+List Users Display Name in domain
+AdFind -b DC=Contoso,DC=com -f "objectcategory=person" displayName -sl
+
+List Subnets
+AdFind -subnets -f (objectCategory=subnet)
+
+Password Policy
+.\AdFind.exe -default -s base lockoutduration lockoutthreshold lockoutobservationwindow maxpwdage minpwdage minpwdlength pwdhistorylength pwdproperties -h <DC IP> -u <username> -up <password>
+
+List User's group memberships 
+.\AdFind.exe -h 10.10.22.22 -sc u:"username" memberof
+
+List All ComputerNames with Opearting System
+.\AdFind.exe -h 10.10.22.22 -default -f "&(objectcategory=computer)(objectclass=computer)" name
+ operatingsystem operatingsystemversion dn
+
+https://social.technet.microsoft.com/wiki/contents/articles/7535.adfind-command-examples.aspx

@@ -1,0 +1,13 @@
+
+
+
+
+
+
+
+
+Changing User Agent String in Chrome:
+-------------------------------------
+
+Bring up Developer tools > side options > More tools > Network conditions
+Scroll down and find the "User Agent" option

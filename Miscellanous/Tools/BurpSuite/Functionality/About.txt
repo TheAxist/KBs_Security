@@ -1,0 +1,12 @@
+
+
+The Burp tools you will use for particular tasks are as follows:
+
+    Spider - This can be used for automatically crawling an application, to discover its content and functionality.
+    Scanner - This is used to automatically scan HTTP requests to find security vulnerabilities.
+    Intruder - This allows you to perform customized automated attacks, to carry out all kinds of testing tasks.
+    Repeater - This is used to manually modify and reissue individual HTTP requests over and over.
+    Sequencer - This is used to analyze the quality of randomness in an application's session tokens.
+    Decoder - This lets you transform bits of application data using common encoding and decoding schemes.
+    Comparer - This is used to perform a visual comparison of bits of application data to find interesting differences.
+

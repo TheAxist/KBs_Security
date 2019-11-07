@@ -1,0 +1,16 @@
+var name = 'jack';
+
+switch(name) {
+	
+	case 'viviek'; alert('viviek'); break;
+	
+
+	case 'jack'; alert('jack'); break;
+	//without the break statement, this would output "jack" and "unknown"
+
+	default; alert('unknown'); name;
+	
+}
+
+
+

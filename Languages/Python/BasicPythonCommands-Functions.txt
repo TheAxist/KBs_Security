@@ -1,0 +1,38 @@
+Input/Output
+raw_input() - Take input of any kind
+print - display information to the screen
+
+Print Formatting
+print "%[format_character]" % (corresponding data)
+'d'	Signed interger decimal
+'i'	Signed inter decimal
+'x'	Signed heximal decimal (lowercase)
+'e'	floating point exponetial format (lowercase)
+'f'	floating point decimal format
+'c'	Single charater (accepts interger r single character string)
+'r'	String (converts any Python object using repr()).
+
+Example:
+>>> str1 = "Our Number is: %d"
+>>> str2 = 5
+>>> print str1 % (str2)
+Our Number is: 5
+>>> print "Our Number is: %d" % (str2)
+Our Number is: 5
+
+If: Checks the True/False (Boolean)
+>>> bool1 = True
+>>> if (bool1):
+	print "True"
+>>> bool1 = False 
+>>> if (bool1):
+
+
+def: defines a function object
+def functionname()::
+	functionbody
+>>> func1()
+...	print "Hello, World!"
+>>> func1()
+Hello World!
+
