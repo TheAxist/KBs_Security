@@ -1,0 +1,1 @@
+This tool is focused on running payloads on a target maachine and is especially useful if Metasploit or Microsoft Sysinternals psexec cannot cause code to run on a target machine.

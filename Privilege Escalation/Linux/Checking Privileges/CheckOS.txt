@@ -1,0 +1,5 @@
+What's the distribution type? What version?
+cat /etc/issue
+cat /etc/*-release
+  cat /etc/lsb-release      # Debian based
+  cat /etc/redhat-release   # Redhat based

@@ -1,0 +1,1 @@
+Series of PowerShell scripts focused on analyzing a local windows machine to determine if any local privilege escalation vulns would allow a pen tester to gain admin or local SYSTEM level access on the machine.

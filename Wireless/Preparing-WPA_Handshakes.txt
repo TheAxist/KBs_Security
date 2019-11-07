@@ -1,0 +1,6 @@
+Open up the saved WPA Handshake pcap capture.
+
+Wireshark Filter:
+eapol  || wlan.fc.type_subtype == 0x04 || wlan.fc.type_subtype == 0x08
+
+File > Export Specificed Packets - Packet Range: Displayed, then Save

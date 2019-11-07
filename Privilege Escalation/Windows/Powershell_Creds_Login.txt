@@ -1,0 +1,14 @@
+Two Scripts:
+
+
+First one:  whatever.ps1
+$secpasswd = ConvertTo-SecureString "password" -AsPlainText -Force
+$mycreds = New-Object System.Management.Automation.PSCredential ("Intrust",$secpasswd)
+$computer = PC-Name
+[System.Diagnostics.Process]::Start("C:\TMP\ncbat.bat","",$mycreds.Username, $mycreds.Password, $computer)
+
+
+
+Second one:  "hack.bat"
+cmd.exe ping 127.0.0.1
+

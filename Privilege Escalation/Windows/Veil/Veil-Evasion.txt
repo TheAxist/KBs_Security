@@ -1,0 +1,1 @@
+This tool creates payloads designed to evade antivirus tools and other antimalware products.

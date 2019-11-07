@@ -1,0 +1,21 @@
+use post/linux/gather/enum_configs 
+use post/linux/gather/enum_network 
+use post/linux/gather/enum_protections
+use post/linux/gather/enum_system 
+use post/linux/gather/enum_users_history
+
+msf  > use post/linux/gather/enum_configs 
+
+The enum_configs module collects configuration files found on commonly installed applications and services, such as Apache, MySQL, Samba, Sendmail, etc. If a config file is found in its default path, the module will assume that is the file we want.
+
+msf > use post/linux/gather/enum_network 
+The enum_network module gathers network information from the target system IPTables rules, interfaces, wireless information, open and listening ports, active network connections, DNS information and SSH information.
+
+msf > use post/linux/gather/enum_protections
+The enum_protections module tries to find certain installed applications that can be used to prevent, or detect our attacks, which is done by locating certain binary locations, and see if they are indeed executables. For example, if we are able to run ‘snort’ as a command, we assume it’s one of the files we are looking for. This module is meant to cover various antivirus, rootkits, IDS/IPS, firewalls, and other software.
+
+msf > use post/linux/gather/enum_system 
+The enum_system module gathers system information. It collects installed packages, installed services, mount information, user list, user bash history and cron jobs
+
+msf > use post/linux/gather/enum_users_history
+The enum_users_history module gathers user specific information. User list, bash history, mysql history, vim history, lastlog and sudoers.

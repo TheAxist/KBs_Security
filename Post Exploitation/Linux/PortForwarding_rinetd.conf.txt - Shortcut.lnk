@@ -1,0 +1,10 @@
+
+vi /etc/rinetd.conf
+
+edit the following line. This will allow you to RDP through 208.88.127.2:80
+
+bindaddress  bindport  connectaddress  connectport
+208.88.127.2	80	46.26.106.2	3389
+
+Restart the rinetd service:
+/etc/init.d/rinetd restart
