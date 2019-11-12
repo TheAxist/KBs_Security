@@ -1,0 +1,20 @@
+
+# Setup Git to a Git account:
+git config --global user.name "Your name here"
+git config --global user.email "your_email@example.com"
+
+#Generate and add an SSH key to Web GUI:
+ssh-keygen -t rsa -C "your_email@example.com"
+
+#Connecting for first time:
+ssh -T git@github.com -i <Key>
+
+Warning: Permanently added the RSA host key for IP address '140.82.113.3' to the list of known hosts.
+
+Enter passphrase for key '<username>':
+Hi <username>! You've successfully authenticated, but GitHub does not provide shell access.
+
+
+
+# Install Git Updates via Git:
+git clone git://git.kernel.org/pub/scm/git/git.git
