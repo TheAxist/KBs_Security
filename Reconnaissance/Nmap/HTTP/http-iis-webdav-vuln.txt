@@ -1,7 +1,0 @@
-nmap --script http-iis-webdav-vuln -p80,8080 <host>
-
-if your output reads "WebDAV is ENABLED" proceed to use following if you know a folder name:
---script-args=webdavfolder= 
-
-if not try:
-nmap -p80 --script http-iis-short-name-brute <target>

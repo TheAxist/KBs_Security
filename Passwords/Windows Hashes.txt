@@ -1,4 +1,0 @@
-LM: LANMAN hashes
------------------
-AAD3B43 is "padding" in an LM Hash
-AAD3B43 in memory means that NTLM hashes are nearby.

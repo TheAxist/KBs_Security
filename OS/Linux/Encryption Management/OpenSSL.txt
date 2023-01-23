@@ -1,3 +1,0 @@
-openssl rsa -in ssl.key.encrypted -out ssl.key.decrypted
-
-openssl rsa -in key.pem -out key.new

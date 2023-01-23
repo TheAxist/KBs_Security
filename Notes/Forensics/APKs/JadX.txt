@@ -1,0 +1,8 @@
+Decompiling Java 
+----------------
+have an apk file
+
+
+jadx [-gui] [options] <input file> (.dex, .apk, .jar or .cla)
+-d -- output-dir   - output directory
+-j -- thread-count 

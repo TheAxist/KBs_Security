@@ -1,3 +1,0 @@
-Repeater
-
-User Agent Strings:

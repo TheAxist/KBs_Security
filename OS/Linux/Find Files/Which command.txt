@@ -1,2 +1,0 @@
-
-locates a command.  command must be located in my $Path

@@ -1,8 +1,0 @@
-unzip command is used to extract all the files of a zip archive to your current directory:
->unzip filename.zip
-
--tq   The command prints a summary message indicating whether it is usable or broken  
-
-Untar tar.gz
-tar -zxvf <file>
-

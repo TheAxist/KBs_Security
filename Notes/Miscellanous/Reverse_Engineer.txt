@@ -1,0 +1,21 @@
+reverse engineer ftp104.bkp
+
+Original file in a hex dump:
+Tue Sep 26 08:00:01 BST 2017
+------------------------------------------------------------------
+0000000: 4d5a 9000 0300 0000 0400 0000 ffff 0000 (!..............
+0000010: b800 0000 0000 0000 4000 0000 0000 0000 ........ .......
+0000020: 0000 0000 0000 0000 0000 0000 0000 0000 ................
+0000030: 0000 0000 0000 0000 0000 0000 8000 0000 ................
+0000040: 0e1f ba0e 00b4 09cd 21b8 014c cd21 5468 ...........<....
+0000050: 6973 2070 726f 6772 616d 2063 616e 6e6f .....?../_../>>?
+0000060: 7420 6265 2072 756e 2069 6e20 444f 5320 .......>..>..|..
+0000070: 6d6f 6465 2e0d 0d0a 2400 0000 0000 0000 _?..............
+
+I used bash jutsu to get it somewhat close to it’s original state
+root@kali:~# cat /root/Desktop/ftp104.bkp | awk -F" " '{print $2 $3 $4 $5 $6 $7 $8}' > /root/Desktop/ftp104.txt
+
+And then took the date out and ran the following command
+root@kali:~# xxd -r -p /root/Desktop/ftp104.txt > /root/Desktop/ftp104.exe
+
+Now running strings on ftp104.exe will reveal our initial foothold

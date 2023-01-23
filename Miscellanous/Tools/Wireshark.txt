@@ -1,6 +1,0 @@
-
-Filters:
-
-
-# Locate all session ID filters
-http.cookie contains datr

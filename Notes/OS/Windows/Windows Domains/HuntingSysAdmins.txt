@@ -1,0 +1,14 @@
+Hunting Down Sys Admins:
+========================
+
+# Use SysInternal tool PsLoggedon.exe OR Metasploits:
+auxiliary/scanner/smb/psexec_loggedin_users
+
+
+# From JoeWare Tools:  NetSess.exe
+# (Windows Tool) you can query a domain controller to often find higher value targets.  Will display users and where they're logged from.
+.\NetSess.exe <Domain Controller IP>
+
+
+
+PSLoggedon.exe

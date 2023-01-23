@@ -1,3 +1,0 @@
-SSH
-User:  Pi
-Pass:  Rasphberry

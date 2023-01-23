@@ -1,0 +1,13 @@
+search portscan
+
+SMB Version Scanning - Port 445
+--------------------
+use auxiliary/scanner/smb/smb_version
+
+Idle Scanning
+-------------
+#Find zombies first, look for IPID sequence class: Incremental!"
+use auxiliary/scanner/ip/ipidseq
+
+#  first IP = idle host , second IP = Target
+nmap -PN -sI 192.168.1.109 192.168.1.114

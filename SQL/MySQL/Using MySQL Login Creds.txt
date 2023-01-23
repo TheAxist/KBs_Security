@@ -1,8 +1,0 @@
-Example
-$server = "localhost"
-$username = "root"
-$password = "H4u%QJ_H99"
-$database = "Users"
-
-mysql -u root -p -h 192.168.111.140
-

@@ -1,3 +1,0 @@
-First time setting up SSH to server, need to create public/private key pair:
-> sshd-generate
-

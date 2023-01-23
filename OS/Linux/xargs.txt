@@ -1,6 +1,0 @@
-
-
-find . -name "foo*" | xargs gedit
-
-Find file and grep for inner
-> find -name "*.txt" | xargs grep "abc"

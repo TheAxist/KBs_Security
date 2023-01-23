@@ -1,4 +1,0 @@
-
-
-Setting up SMB sessions - Mounting a share on target:
-net use * \\[targetIP]\[share]   [password]  /u:[user]

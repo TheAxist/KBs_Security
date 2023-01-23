@@ -1,0 +1,16 @@
+apt-get update && apt-get install locate && apt-get install nmap -y  && sudo apt-get install git  && git clone https://github.com/LionSec/katoolin.git && sudo cp katoolin/katoolin.py /usr/bin/katoolin  
+
+$username="whatever"
+
+adduser $username
+passwd
+echo '$username ALL=(ALL) ALL' >> /etc/sudoers
+
+## Disable root login
+vi /etc/ssh/sshd_config
+##  Change this line:
+>#PermitRootLogin yes
+PermitRootLogin no
+
+ssh-keygen -t rsa
+Enter file in which to save the key (/home/demo/.ssh/id_rsa):

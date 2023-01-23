@@ -1,0 +1,8 @@
+
+
+Linux:
+find / -name '*.nse'
+locate *.nse
+
+
+$ nmap --script-updatedb

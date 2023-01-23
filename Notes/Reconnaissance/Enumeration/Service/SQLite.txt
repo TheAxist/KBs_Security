@@ -1,0 +1,6 @@
+File will look like:  db.sqlite3
+
+>sqlite3 db.sqlite3
+> .tables
+
+>select * from [table name];

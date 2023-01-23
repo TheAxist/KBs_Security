@@ -1,0 +1,6 @@
+
+    exec() is for calling a system command, and perhaps dealing with the output yourself.
+
+    system() is for executing a system command and immediately displaying the output - presumably text.
+
+    passthru() is for executing a system command which you wish the raw return from - presumably something binary.

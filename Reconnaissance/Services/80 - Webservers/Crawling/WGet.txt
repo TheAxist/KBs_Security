@@ -1,7 +1,0 @@
-wget -nd -r -R 
-
--A (accept only these type of files
--P (prefix output files
-
-
-Windows Equivalent:

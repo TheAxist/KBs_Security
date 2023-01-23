@@ -1,9 +1,0 @@
-Open a NEW terminal
-
-    proxychains ssh -R  [YOUR RANDOM PORT]:127.0.0.1:[YOUR RANDOM PORT] pivot@pivot.enciphe.red
-
-Password is: pivotme
-
-Open ANOTHER NEW terminal
-
-    proxychains msfconsole

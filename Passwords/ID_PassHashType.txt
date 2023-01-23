@@ -1,6 +1,0 @@
-Hash-Identifier
----------------
-interactive tool, after running it, supply the hash.
-
-
-Hashid <hash>

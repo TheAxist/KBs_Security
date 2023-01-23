@@ -1,0 +1,6 @@
+
+Encrypt:
+echo 'This test' | tr 'A-Za-z' 'N-ZA-Mn-za-m'
+
+Decrypt:
+echo "Rkcybg Fuvg" | tr 'A-Za-z' 'N-ZA-Mn-za-m'

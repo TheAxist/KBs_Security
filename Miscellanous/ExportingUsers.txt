@@ -1,9 +1,0 @@
-
-Exporting Users out of Active Directory:
-=======================================
-
-
-
-Exporting Users from an ajax call:
-==================================
-Sometimes might encounter a webpage that you have to scroll down for users to load and select to export.  This can be slow and impossible with 1000s of users.  Find the ajax call using burp Inceptor and move it over to Repeater.  Discover the parmarter for page size

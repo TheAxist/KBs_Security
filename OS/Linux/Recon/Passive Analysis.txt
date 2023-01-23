@@ -1,5 +1,0 @@
-Running p0f against Traffic capture
-
-p0f -s capture1.pcap -A
-
-Spitzner's "Know Your Enemy: Passive Fingerprinting" paper [10] (4 March 2002) discussed four parameters that seemed to vary consistently between operating systems: TTL, Window Size, DF, and TOS. 

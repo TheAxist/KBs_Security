@@ -1,0 +1,42 @@
+IPTABLES
+Note that Rules are applied in order of appearance, and the inspection ends immediately when there is a match.
+
+All commands to be run as root:
+iptables
+-L	lists
+-A      Add rule
+-D      Drop rule 
+
+Examples
+--------
+# Adding Rules: Adds a rule at end of specified chain
+iptables -A INPUT -p tcp --dport 80 -j ACCEPT
+
+# Deleting Rules: delete rule in 5th position
+iptables -D INPUT 5
+
+# Inserting Rules: create a rule at first position
+iptables -I INPUT 1 -p tcp --dport 80 -j ACCEPT
+
+
+# Block Traffic: Specific IP:
+iptables -A INPUT -s 98.190.145.152 -j DROP
+
+# Unblock Traffic: Specific IP:
+iptables -D INPUT -s 98.190.145.152 -j DROP
+service iptables save
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://fedoraproject.org/wiki/How_to_edit_iptables_rules

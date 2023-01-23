@@ -1,6 +1,0 @@
-WARNING: The following packages cannot be authenticated!
-
-
-$ sudo apt-key update
-$ sudo apt-get update
-then try to install something...

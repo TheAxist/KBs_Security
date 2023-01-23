@@ -1,2 +1,0 @@
-
-reads a list of files from a database and prints out exsisting files which matches user query. "updatedb" command updates this database

@@ -1,5 +1,0 @@
-
-Once able to connect to SMB
-use auxiliary/admin/smb/samba_symlink_traversal
-
-This module exploits a directory traversal flaw in the Samba CIFS server. To exploit this flaw, a writeable share must be specified. The newly created directory will link to the root filesystem.

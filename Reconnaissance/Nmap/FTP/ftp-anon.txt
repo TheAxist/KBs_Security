@@ -1,4 +1,0 @@
-nmap -sV -sC <target>
-
-Checks if an FTP server allows anonymous logins.
-If anonymous is allowed, gets a directory listing of the root directory and highlights writeable files.

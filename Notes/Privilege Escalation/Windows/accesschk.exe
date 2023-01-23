@@ -1,0 +1,3 @@
+accesschk.exe -uwcqv "Authenticated Users" 
+
+accesschk.exe -uwcqv "Authenticated Users" *

@@ -1,0 +1,5 @@
+python -c 'import pty;pty.spawn("/bin/bash")'
+
+
+if vim is still stupid:
+:set term=cons25

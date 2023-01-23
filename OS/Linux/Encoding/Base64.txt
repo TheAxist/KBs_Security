@@ -1,9 +1,0 @@
-
-
-base64 program from the coreutils package:
-> echo QWxhZGRpbjpvcGVuIHNlc2FtZQ== | base64 -d
-
-
-Encode:
-> echo -n 'scottlinux.com rocks' | base64
-c2NvdHRsaW51eC5jb20gcm9ja3MK

@@ -1,6 +1,0 @@
-NetSess - View where all users are logged on 
-ADFind  - Query OUs, users, computers, etc
-OldCmp	- Command line Active Directory tool to find old user and computer accounts.
-MemberOf - Command line Active Directory tool to enumerate group memberships of given user. 
-
-

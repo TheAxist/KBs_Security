@@ -1,0 +1,2 @@
+# cat /etc/issue
+Linux Mint Olivia \n \l

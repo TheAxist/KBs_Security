@@ -1,0 +1,16 @@
+Sticky Bits
+-----------
+A sticky bit is a permission bit that is set on a directory that allows only the owner of the file within that directory, the owner of the directory or the root user to delete or rename the file. No other user has the needed privileges to delete the file created by some other user.
+
+This is a security measure to avoid deletion of critical folders and their content (sub-directories and files), though other users have full permissions.
+Why does /tmp have the t sticky bit?
+
+The /tmp directory can be used by different Linux users to create temporary files. Now, what if an user deletes/rename a file created by some other user in this directory?
+
+Well, to avoid these kind of issues, the concept of sticky bit is used. So for that a 777 is given but preserving the sticky bit is not a bad idea.
+
+chmod +t ~/Desktop/test
+
+Numerical/octal way (1, sticky bit bit as value 1 in the first position)
+
+chmod 1757 ~/Desktop/test

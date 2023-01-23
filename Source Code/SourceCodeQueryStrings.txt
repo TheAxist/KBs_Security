@@ -1,4 +1,0 @@
-Source Code Query Strings
-=========================
-Http(Get|Post|Patch|Put|Delete)
-\[Route\(

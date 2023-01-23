@@ -1,0 +1,25 @@
+
+MySQL Commands while logged in!
+-------------------------------
+Start with seeing what databases there are...
+>show databases;
+
+select working with one by 'use' it
+>use Users;
+
+Get a response like the following:
+"Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed"
+
+See Tables within the Database you have selected:
+mysql> show tables;
+
+mysql> select * from users;
+
+
+
+
+Resources:
+http://g2pc1.bu.edu/~qzpeng/manual/MySQL%20Commands.htm

@@ -1,4 +1,0 @@
-Verbs:
-
-HELP 
-listusers

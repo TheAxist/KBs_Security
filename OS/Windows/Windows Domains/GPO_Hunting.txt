@@ -1,6 +1,0 @@
-
-Mount SYSVOL and then start your finds:
-
-find . -name "*.vbs" -type f 2>/dev/null
-find . -name "*.xml" -type f 2>/dev/null
-find . -name "*.bat" -type f 2>/dev/null

@@ -1,0 +1,36 @@
+Vim
+---
+Ctrl-D  move half-page down
+Ctrl-U  move half-page up
+Ctrl-B  page up
+Ctrl-F  page down
+
+$  -Move to the end of the line. 
+0  -Move to the beginning of the line. 
+
+G  -Jump to end of File.
+gg -Jump to beginning of file.
+
+n   next matching search pattern
+N   previous matching search pattern
+
+Terminator
+----------
+
+
+Bash
+----
+Ctrl + a   Move to the start of line. 
+Ctrl + e   Move to the end of line.
+Ctrl + l   Clear the screen. 
+
+Paste the last cut text. Ctrl + y
+Search as you type. Ctrl + r and type the search term; Repeat Ctrl + r to loop through results.
+
+
+Terminator
+---------- 
+Open new tab: Ctrl + Shift + T
+Close current Panel: Ctrl + Shift + W
+go to next tab: ctrl+pgdown
+go to previous tab: ctrl+pgup

@@ -1,9 +1,0 @@
-Windows Credential Editor:
-
-
-fgdump
-
-Resource:
-http://fuzzynop.blogspot.com/2012/09/pass-hash-without-metasploit.html
-
-Metasploit Pass The Hash:

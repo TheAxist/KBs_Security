@@ -1,0 +1,20 @@
+List Local users:
+>net users
+
+List Local groups:
+> net localgroup
+
+List Members of local admin group
+> net localgroup administrators
+
+Add a user:
+>net user [logon_name] [password] /add
+
+Put the user in a local admin group:
+> net localgroup administrators [logon_name] /add
+
+Change Password:
+>net user administrator password123
+
+Password Policies
+>net accounts /domain

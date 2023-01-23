@@ -1,0 +1,2 @@
+# Sort and unique duplicates
+sort wordlist.dic | uniq > Uniq_wordlist.dic

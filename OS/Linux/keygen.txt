@@ -1,9 +1,0 @@
-SSH Keygen
-==========
-
-ssh-keygen -f ~/tatu-key-ecdsa -t ecdsa -b 521
--f filename
--t rsa, dsa, ecdsa, ed25519
--b bits
-
-https://www.ssh.com/ssh/keygen/

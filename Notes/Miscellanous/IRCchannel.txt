@@ -1,0 +1,8 @@
+> irssi
+Connect to Server:
+> /connect irc.nullirc.net
+Connect to Channel:
+/join #test
+
+
+https://quadpoint.org/articles/irssi/

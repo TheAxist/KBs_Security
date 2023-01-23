@@ -1,0 +1,3 @@
+ nmap -sV -sC <target>
+
+Checks to see if an FTP server allows port scanning using the FTP bounce method.

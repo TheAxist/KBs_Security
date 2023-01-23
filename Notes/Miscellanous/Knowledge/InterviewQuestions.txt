@@ -1,0 +1,58 @@
+Tell me about to as much detail as you can the differences between UDP and TCP
+
+
+Describe the difference between HTTPS and TLS
+
+
+Describe a vulnerability assessment versus a penetration test.
+
+
+How does static and dynamic analysis differ with regards to code?
+
+
+How does ARP work?
+
+
+What is the difference between router and a switch with regards to purpose?
+
+
+How does a TLS 1.2 handshake work?
+
+
+
+Explain how a vulnerability might differ from an exploit
+
+
+You are trying to footprint a network and decide to conduct a SYN scan; You notice that you never seem to get a response though. What could be a likely cause?
+
+
+You are in charge of conducting an assessment and need to review the following items:
+
+- SQLi
+
+- XSS
+
+- CSRF
+
+- Services required for operation are the only services allowed through the FW
+
+-- The application contains over 1 million lines of code; the number of pages contain over 1000 web pages; The pages responsible for input total 5 pages
+
+- 2 Login portal pages
+
+- Forum page
+
+- Support page
+
+- Purchasing page
+
+-- You have been allotted 30 hours of effort; To conduct a complete assessment of this size would take easily 40+ hours (including writing a report). You also have to allot time to get the report through your QA. How would you approach this assessment to ensure you remain on time and within budget?
+
+
+Talk to be about serialization and why it can be a security issue. What might be a way to mitigate
+
+
+You are dealing with a project where there is a finding that a login page is vulnerable to brute force attacks. How would you approach mitigation and what options would you present to the project team?
+
+
+You are testing a web application and need to determine if the password is properly secured in the database. This is a black box test and the team has been instructed not to divulge the answer through communication or code review. How could you determine if a password is encrypted versus stored in plain text? How could you determine if the password is hashed versus either of the previous?

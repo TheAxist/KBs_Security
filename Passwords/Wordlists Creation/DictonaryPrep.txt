@@ -1,6 +1,0 @@
-# Sort and unique duplicates
-sort wordlist.dic | uniq > Uniq_wordlist.dic
-
-
-# Only do passwords of 10 characters or more
-grep -vwE '\w{1,10}' <filename>

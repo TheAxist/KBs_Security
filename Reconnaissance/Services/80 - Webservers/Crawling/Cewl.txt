@@ -1,3 +1,0 @@
-cewl www.megacorpone.com -m 6 -w /root/mega-cewl.txt 2> /dev/null
-
-john --wordlist=mega-cewl.txt --rules --stdout > mega-mangled
